@@ -3,7 +3,7 @@
   when: ansible_os_family == "Debian"
   apt:
     name: nginx
-    state: installed
+    state: present
   notify:
     - Start Nginx
   tags: balancer
@@ -12,7 +12,7 @@
   when: ansible_os_family == "RedHat"
   yum:
     name: nginx
-    state: installed
+    state: present
   notify:
     - Start Nginx
   tags: balancer
